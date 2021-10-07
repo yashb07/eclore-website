@@ -9,6 +9,7 @@ body {
   padding: 0px;
   overflow-x: hidden;
   font-family: 'Merriweather', serif;
+  width: 100%;
 }
 
 a {
@@ -44,6 +45,10 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--brown);
+}
+
+.wrapper {
+  overflow-x: hidden;
 }
 
 #myBtn {
@@ -101,6 +106,8 @@ a {
   flex-wrap: nowrap;
   background-color: var(--primary-cream);
   position: relative;
+  align-items: center;
+  width: 100%;
 }
 
 #home .home-info {
@@ -109,7 +116,7 @@ a {
 }
 
 #home .home-info h1 {
-  font-size: 80px;
+  font-size: 64px;
   font-weight: 200;
   color: var(--brown);
 }
@@ -157,6 +164,8 @@ a {
 
 #break1 h1 span{
   color: var(--brown-light);
+  font-size: 40px;
+  font-weight: 200;
 }
 
 #break1 p {
@@ -173,7 +182,7 @@ a {
   color: var(--brown);
 }
 
-#break1 .break1-socials{
+#break1 .break1-socials {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -226,7 +235,8 @@ a {
 }
 
 #about .about-info h1 {
-  font-size: 64px;
+  font-size: 48px;
+  font-weight: 200;
   color: var(--pure);
 }
 
@@ -272,12 +282,14 @@ a {
 
 #services .services-title h1 {
   font-size: 64px;
+  font-weight: 200;
   color: var(--brown);
 }
 
 #services .services-title h4 {
   margin-top: -2rem;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 200;
   color: var(--brown-light);
 }
 
@@ -320,6 +332,7 @@ a {
 
 #services .card-wrapper .service-card h4 {
   color: var(--brown-light);
+  font-weight: 200;
 }
 
 #services .card-wrapper .service-card .card-info {
@@ -350,6 +363,7 @@ a {
 
 .reviews .title h1 {
   font-size: 64px;
+  font-weight: 200;
   color: var(--orange);
   margin-bottom: 3rem;
 }
@@ -476,6 +490,7 @@ a {
 
 #contact .contact-info h1 {
   font-size: 48px;
+  font-weight: 200;
   color: var(--brown);
 }
 
@@ -521,6 +536,7 @@ a {
 #contact .contact-form h1 {
   font-size: 48px;
   color: var(--brown);
+  font-weight: 200;
 }
 
 #contact .contact-form form {
@@ -555,4 +571,115 @@ a {
 
 #contact .contact-form form .form-field button:hover {
   background-color: var(--brown);
+}
+
+@media screen and (max-width: 768px) {
+  /* Universal Section */
+  body {
+    width: 360px;
+    overflow-x: hidden;
+  }
+  #home img, #about img {
+    visibility: collapse;
+  }
+  #myBtn {
+    position: fixed;
+    bottom: auto;
+    top: 20px;
+    right: 20px;
+  }
+
+  /* Home Section */
+  #home {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #home .home-img img {
+    visibility: visible;
+    align-self: center;
+    padding: 3rem 2.5rem;
+  }
+  #home .home-info h1 {
+    text-align: center;
+  }
+  #home .home-info {
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Break Section */
+  #break1 h1 {
+    font-size: 24px;
+  }
+  #break1 h1 span {
+    font-size: 28px;
+  }
+  #break1 p {
+    width: 100%;
+    line-height: 1.5;
+  }
+  #break1 .break1-socials {
+    width: 100%;
+  }
+
+  /* About Section */
+  #about {
+    flex-direction: column;
+  }
+  #about .about-info {
+    width: 100%;
+    text-align: center;
+  }
+  #about img {
+    visibility: visible;
+  }
+
+  /* Services Section */
+  #services .card-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #services .services-title h1 {
+    font-size: 36px;
+  }
+  #services .services-title h4 {
+    margin-top: 0px;
+    font-size: 16px;
+  }
+
+  /* Reviews Section */
+  .reviews .review {
+    width: 75%;
+  }
+  .reviews .title h1 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+  }
+
+  /* Contact Section */
+  #contact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0rem;
+  }
+  #contact .contact-info {
+    width: 100%;
+    text-align: center;
+  }
+  #contact .contact-info h1 {
+    text-align: center;
+  }
+  #contact .contact-info .contact-details {
+    justify-content: center;
+  }
+  #contact .contact-form form {
+    width: 100%;
+  }
+  #contact .contact-form form .form-field {
+    flex-direction: column;
+  }
+  #contact .contact-form form .form-field button {
+    margin-top: 1rem;
+  }
 }
